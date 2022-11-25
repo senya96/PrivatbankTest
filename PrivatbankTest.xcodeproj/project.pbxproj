@@ -9,21 +9,51 @@
 /* Begin PBXBuildFile section */
 		AA238A7D2930D35F00031EBB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A7C2930D35F00031EBB /* AppDelegate.swift */; };
 		AA238A7F2930D35F00031EBB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A7E2930D35F00031EBB /* SceneDelegate.swift */; };
-		AA238A812930D35F00031EBB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A802930D35F00031EBB /* ViewController.swift */; };
-		AA238A842930D35F00031EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA238A822930D35F00031EBB /* Main.storyboard */; };
 		AA238A862930D36300031EBB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA238A852930D36300031EBB /* Assets.xcassets */; };
 		AA238A892930D36300031EBB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA238A872930D36300031EBB /* LaunchScreen.storyboard */; };
+		AA238A932930D47700031EBB /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A922930D47700031EBB /* Dynamic.swift */; };
+		AA238A962930D4B200031EBB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A952930D4B200031EBB /* Constants.swift */; };
+		AA238A9A2930D4E100031EBB /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A992930D4E100031EBB /* BaseCoordinator.swift */; };
+		AA238A9C2930D4F700031EBB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A9B2930D4F700031EBB /* BaseViewController.swift */; };
+		AA238A9E2930D50B00031EBB /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238A9D2930D50B00031EBB /* BaseViewModel.swift */; };
+		AA238AA32930D54500031EBB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AA22930D54500031EBB /* Coordinator.swift */; };
+		AA238AA52930D55E00031EBB /* Coordinator+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AA42930D55E00031EBB /* Coordinator+setup.swift */; };
+		AA238AA72930D5BC00031EBB /* UIViewController+StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AA62930D5BC00031EBB /* UIViewController+StoryboardInstantiable.swift */; };
+		AA238AAE2930D5F300031EBB /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AAD2930D5F300031EBB /* MainViewController.swift */; };
+		AA238AB02930D60200031EBB /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AAF2930D60200031EBB /* MainViewModel.swift */; };
+		AA238AB22930D63200031EBB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA238AB12930D63200031EBB /* Main.storyboard */; };
+		AA238AB52930D66D00031EBB /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AB42930D66D00031EBB /* AppCoordinator.swift */; };
+		AA238AB72930D67E00031EBB /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AB62930D67E00031EBB /* MainCoordinator.swift */; };
+		AA238ABF2930E07F00031EBB /* UIViewController+keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238ABE2930E07F00031EBB /* UIViewController+keyboard.swift */; };
+		AA238AC62930E64400031EBB /* UIView+firstResponder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA238AC52930E64400031EBB /* UIView+firstResponder.swift */; };
+		E3327046558AD60ACCF8076F /* Pods_PrivatbankTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5FAF19775DAAF8E47119EB1 /* Pods_PrivatbankTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		34F2C05997B9C9E5E3808159 /* Pods-PrivatbankTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatbankTest.debug.xcconfig"; path = "Target Support Files/Pods-PrivatbankTest/Pods-PrivatbankTest.debug.xcconfig"; sourceTree = "<group>"; };
 		AA238A792930D35F00031EBB /* PrivatbankTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PrivatbankTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA238A7C2930D35F00031EBB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA238A7E2930D35F00031EBB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AA238A802930D35F00031EBB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AA238A832930D35F00031EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA238A852930D36300031EBB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA238A882930D36300031EBB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA238A8A2930D36300031EBB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA238A922930D47700031EBB /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		AA238A952930D4B200031EBB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA238A992930D4E100031EBB /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		AA238A9B2930D4F700031EBB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		AA238A9D2930D50B00031EBB /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		AA238AA22930D54500031EBB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		AA238AA42930D55E00031EBB /* Coordinator+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator+setup.swift"; sourceTree = "<group>"; };
+		AA238AA62930D5BC00031EBB /* UIViewController+StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstantiable.swift"; sourceTree = "<group>"; };
+		AA238AAD2930D5F300031EBB /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		AA238AAF2930D60200031EBB /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		AA238AB12930D63200031EBB /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		AA238AB42930D66D00031EBB /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		AA238AB62930D67E00031EBB /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AA238ABE2930E07F00031EBB /* UIViewController+keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+keyboard.swift"; sourceTree = "<group>"; };
+		AA238AC52930E64400031EBB /* UIView+firstResponder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+firstResponder.swift"; sourceTree = "<group>"; };
+		C5FAF19775DAAF8E47119EB1 /* Pods_PrivatbankTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PrivatbankTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC257465006ED5C603794B45 /* Pods-PrivatbankTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PrivatbankTest.release.xcconfig"; path = "Target Support Files/Pods-PrivatbankTest/Pods-PrivatbankTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3327046558AD60ACCF8076F /* Pods_PrivatbankTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +73,8 @@
 			children = (
 				AA238A7B2930D35F00031EBB /* PrivatbankTest */,
 				AA238A7A2930D35F00031EBB /* Products */,
+				F90C7EF14A7E0C0948E2243D /* Pods */,
+				EA3281570FB95DBC06F2935E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +89,198 @@
 		AA238A7B2930D35F00031EBB /* PrivatbankTest */ = {
 			isa = PBXGroup;
 			children = (
+				AA238AB92930DA8800031EBB /* SystemFiles */,
+				AA238A902930D46000031EBB /* Helpers */,
+				AA238A942930D4A100031EBB /* Resources */,
+				AA238A972930D4C800031EBB /* Extensions */,
+				AA238A9F2930D52000031EBB /* Protocols */,
+				AA238AB32930D65B00031EBB /* Coordinators */,
+				AA238AA82930D5CC00031EBB /* UI */,
+				AA238AB82930D6F000031EBB /* Catalogs */,
+			);
+			path = PrivatbankTest;
+			sourceTree = "<group>";
+		};
+		AA238A902930D46000031EBB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA238A912930D46A00031EBB /* Byndings */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AA238A912930D46A00031EBB /* Byndings */ = {
+			isa = PBXGroup;
+			children = (
+				AA238A922930D47700031EBB /* Dynamic.swift */,
+			);
+			path = Byndings;
+			sourceTree = "<group>";
+		};
+		AA238A942930D4A100031EBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AA238A952930D4B200031EBB /* Constants.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA238A972930D4C800031EBB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AA238ABD2930E06800031EBB /* UIKit */,
+				AA238A982930D4D000031EBB /* Base */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AA238A982930D4D000031EBB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AA238A992930D4E100031EBB /* BaseCoordinator.swift */,
+				AA238A9B2930D4F700031EBB /* BaseViewController.swift */,
+				AA238A9D2930D50B00031EBB /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AA238A9F2930D52000031EBB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AA02930D52900031EBB /* Coordinator */,
+				AA238AA12930D52F00031EBB /* ViewController */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AA238AA02930D52900031EBB /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AA22930D54500031EBB /* Coordinator.swift */,
+				AA238AA42930D55E00031EBB /* Coordinator+setup.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		AA238AA12930D52F00031EBB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AA62930D5BC00031EBB /* UIViewController+StoryboardInstantiable.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AA238AA82930D5CC00031EBB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AA92930D5D300031EBB /* Screens */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		AA238AA92930D5D300031EBB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AAA2930D5D800031EBB /* Main */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		AA238AAA2930D5D800031EBB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AAC2930D5E300031EBB /* ViewController */,
+				AA238AAB2930D5DE00031EBB /* ViewModel */,
+				AA238AB12930D63200031EBB /* Main.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AA238AAB2930D5DE00031EBB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AAF2930D60200031EBB /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA238AAC2930D5E300031EBB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AAD2930D5F300031EBB /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		AA238AB32930D65B00031EBB /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AB42930D66D00031EBB /* AppCoordinator.swift */,
+				AA238AB62930D67E00031EBB /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		AA238AB82930D6F000031EBB /* Catalogs */ = {
+			isa = PBXGroup;
+			children = (
+				AA238A852930D36300031EBB /* Assets.xcassets */,
+			);
+			path = Catalogs;
+			sourceTree = "<group>";
+		};
+		AA238AB92930DA8800031EBB /* SystemFiles */ = {
+			isa = PBXGroup;
+			children = (
 				AA238A7C2930D35F00031EBB /* AppDelegate.swift */,
 				AA238A7E2930D35F00031EBB /* SceneDelegate.swift */,
-				AA238A802930D35F00031EBB /* ViewController.swift */,
-				AA238A822930D35F00031EBB /* Main.storyboard */,
-				AA238A852930D36300031EBB /* Assets.xcassets */,
 				AA238A872930D36300031EBB /* LaunchScreen.storyboard */,
 				AA238A8A2930D36300031EBB /* Info.plist */,
 			);
-			path = PrivatbankTest;
+			path = SystemFiles;
+			sourceTree = "<group>";
+		};
+		AA238ABD2930E06800031EBB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AC72930E64F00031EBB /* UIViewController */,
+				AA238AC42930E63300031EBB /* UIView */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		AA238AC42930E63300031EBB /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				AA238AC52930E64400031EBB /* UIView+firstResponder.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		AA238AC72930E64F00031EBB /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AA238ABE2930E07F00031EBB /* UIViewController+keyboard.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		EA3281570FB95DBC06F2935E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5FAF19775DAAF8E47119EB1 /* Pods_PrivatbankTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F90C7EF14A7E0C0948E2243D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				34F2C05997B9C9E5E3808159 /* Pods-PrivatbankTest.debug.xcconfig */,
+				CC257465006ED5C603794B45 /* Pods-PrivatbankTest.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +290,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AA238A8D2930D36300031EBB /* Build configuration list for PBXNativeTarget "PrivatbankTest" */;
 			buildPhases = (
+				FD1D915BE3F288AEDD7E9BC5 /* [CP] Check Pods Manifest.lock */,
 				AA238A752930D35F00031EBB /* Sources */,
 				AA238A762930D35F00031EBB /* Frameworks */,
 				AA238A772930D35F00031EBB /* Resources */,
+				50DD1F0DA15282388CADC6F0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,34 +345,81 @@
 			files = (
 				AA238A892930D36300031EBB /* LaunchScreen.storyboard in Resources */,
 				AA238A862930D36300031EBB /* Assets.xcassets in Resources */,
-				AA238A842930D35F00031EBB /* Main.storyboard in Resources */,
+				AA238AB22930D63200031EBB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		50DD1F0DA15282388CADC6F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatbankTest/Pods-PrivatbankTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PrivatbankTest/Pods-PrivatbankTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PrivatbankTest/Pods-PrivatbankTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD1D915BE3F288AEDD7E9BC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PrivatbankTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AA238A752930D35F00031EBB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA238A812930D35F00031EBB /* ViewController.swift in Sources */,
+				AA238AA52930D55E00031EBB /* Coordinator+setup.swift in Sources */,
+				AA238A962930D4B200031EBB /* Constants.swift in Sources */,
+				AA238AA72930D5BC00031EBB /* UIViewController+StoryboardInstantiable.swift in Sources */,
+				AA238AAE2930D5F300031EBB /* MainViewController.swift in Sources */,
+				AA238AC62930E64400031EBB /* UIView+firstResponder.swift in Sources */,
+				AA238A9A2930D4E100031EBB /* BaseCoordinator.swift in Sources */,
+				AA238AB02930D60200031EBB /* MainViewModel.swift in Sources */,
+				AA238AB52930D66D00031EBB /* AppCoordinator.swift in Sources */,
+				AA238ABF2930E07F00031EBB /* UIViewController+keyboard.swift in Sources */,
+				AA238A932930D47700031EBB /* Dynamic.swift in Sources */,
+				AA238AB72930D67E00031EBB /* MainCoordinator.swift in Sources */,
 				AA238A7D2930D35F00031EBB /* AppDelegate.swift in Sources */,
+				AA238A9E2930D50B00031EBB /* BaseViewModel.swift in Sources */,
+				AA238A9C2930D4F700031EBB /* BaseViewController.swift in Sources */,
 				AA238A7F2930D35F00031EBB /* SceneDelegate.swift in Sources */,
+				AA238AA32930D54500031EBB /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AA238A822930D35F00031EBB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AA238A832930D35F00031EBB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AA238A872930D36300031EBB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +547,7 @@
 		};
 		AA238A8E2930D36300031EBB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F2C05997B9C9E5E3808159 /* Pods-PrivatbankTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,12 +555,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BS5JRS3VLT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrivatbankTest/Info.plist;
+				INFOPLIST_FILE = PrivatbankTest/SystemFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,6 +577,7 @@
 		};
 		AA238A8F2930D36300031EBB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC257465006ED5C603794B45 /* Pods-PrivatbankTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,12 +585,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BS5JRS3VLT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = PrivatbankTest/Info.plist;
+				INFOPLIST_FILE = PrivatbankTest/SystemFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
