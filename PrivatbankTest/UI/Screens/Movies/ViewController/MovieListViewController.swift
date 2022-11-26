@@ -36,7 +36,6 @@ class MovieListViewController: BaseViewController {
     
     private func bindViewModel() {
         viewModel?.movies.bind { [weak self] movies in
-            print("Movies: \(movies.count)")
             self?.tableView?.reloadData()
         }
     }
@@ -51,7 +50,9 @@ extension MovieListViewController: UISearchBarDelegate {
         }
         searchBar.resignFirstResponder()
         
-        viewModel?.search(query: text)
+        viewModel?.search(query: text) { [weak self] error in
+            self?.showErrorAlert(with: error)
+        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -71,8 +72,14 @@ extension MovieListViewController: StoryboardInstantiable {
 // MARK: - PaginatedTableViewDelegate
 
 extension MovieListViewController: PaginatedTableViewDelegate {
-    func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: @escaping (Bool) -> Void, onError: ((Error) -> Void)?) {
-        viewModel?.getNextPage(completion: onSuccess)
+    func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: @escaping (Bool) -> Void, onError: @escaping (Error) -> Void) {
+        viewModel?.getNextPage { success, error in
+            onSuccess(success)
+            if let error = error {
+                onError(error)
+                
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -109,5 +116,14 @@ extension MovieListViewController: PaginatedTableViewDataSource {
             return cell
         }
         return UITableViewCell()
+    }
+}
+
+extension MovieListViewController {
+    func showErrorAlert(with error: Error?) {
+        guard let error = error else { return }
+        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
 }

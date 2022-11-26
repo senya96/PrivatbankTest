@@ -22,7 +22,7 @@ import Foundation
 // MARK: - PaginatedTableView Delegate
 
 @objc public protocol PaginatedTableViewDelegate: AnyObject {
-    func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: @escaping (Bool) -> Void, onError: ((Error) -> Void)?)
+    func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: @escaping (Bool) -> Void, onError: @escaping (Error) -> Void)
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     @objc optional func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)

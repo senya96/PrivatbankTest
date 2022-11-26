@@ -11,7 +11,7 @@ class MovieListViewModel: BaseViewModel<MoviesCoordinator> {
     public var isLastPage = false
     private var currentQuery: String = ""
     
-    public func search(query: String) {
+    public func search(query: String, onError: @escaping (_ error: Error?) -> Void) {
         currentPage = 1
         isLastPage = false
         movies.value = []
@@ -23,28 +23,31 @@ class MovieListViewModel: BaseViewModel<MoviesCoordinator> {
                 strongSelf.movies.value = response.results ?? []
                 strongSelf.isLastPage = response.totalPages == strongSelf.currentPage
             case .failure(let error):
-                fatalError("API ERROR: \(error.localizedDescription)")
+                onError(error)
             }
         }
     }
     
-    public func getNextPage(completion: @escaping (_ success: Bool) -> Void) {
+    public func getNextPage(completion: @escaping (_ hasMoreData: Bool, _ error: Error?) -> Void) {
         guard !isLastPage, !currentQuery.isEmpty else {
-            completion(true)
+            completion(false, nil)
             return
         }
-        currentPage += 1
         
-        coordinator.search(query: currentQuery, page: currentPage) { [weak self] result in
+        coordinator.search(query: currentQuery, page: currentPage + 1) { [weak self] result in
             guard let strongSelf = self else { return }
             switch result {
             case .success(let response):
+                self?.currentPage += 1
                 strongSelf.movies.value += response.results ?? []
                 strongSelf.isLastPage = response.totalPages == strongSelf.currentPage
-                completion(true)
+                var hasMoreData = false
+                if let page = response.page, let totalPages = response.totalPages {
+                    hasMoreData = page < totalPages
+                }
+                completion(hasMoreData, nil)
             case .failure(let error):
-                completion(false)
-                fatalError("API ERROR: \(error.localizedDescription)")
+                completion(false, error)
             }
         }
     }
