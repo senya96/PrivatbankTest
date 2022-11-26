@@ -12,4 +12,5 @@ target 'PrivatbankTest' do
   
   #Utils
   pod 'SVProgressHUD'
+  pod 'SDWebImage'
 end

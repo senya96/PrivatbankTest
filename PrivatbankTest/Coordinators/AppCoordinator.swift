@@ -25,7 +25,7 @@ extension AppCoordinator {
             fatalError("Need window to present flow")
         }
         let navC = UINavigationController()
-        let mainCoordinator = MainCoordinator(navigationController: navC)
+        let mainCoordinator = MoviesCoordinator(navigationController: navC)
         mainCoordinator.setupRoot()
         mainCoordinator.start()
         window.rootViewController = navC
