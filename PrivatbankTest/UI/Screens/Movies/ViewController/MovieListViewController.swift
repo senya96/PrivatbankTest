@@ -11,6 +11,7 @@ class MovieListViewController: BaseViewController {
     var viewModel: MovieListViewModel?
     
     @IBOutlet private weak var tableView: PaginatedTableView?
+    @IBOutlet private weak var nothingToShowL: UILabel?
     
     private let searchBar: UISearchBar = {
         let searchBar = UISearchBar()
@@ -80,6 +81,8 @@ extension MovieListViewController: PaginatedTableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard let movies = viewModel?.movies.value, movies.indices.contains(indexPath.row) else { return }
+        viewModel?.openMovie(movies[indexPath.row])
     }
 }
 
@@ -91,7 +94,10 @@ extension MovieListViewController: PaginatedTableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.movies.value.count ?? 0
+        let numberOfRows = viewModel?.movies.value.count ?? 0
+        tableView.isHidden = numberOfRows == 0
+        nothingToShowL?.isHidden = numberOfRows != 0
+        return numberOfRows
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

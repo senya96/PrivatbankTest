@@ -55,4 +55,8 @@ class MovieListViewModel: BaseViewModel<MoviesCoordinator> {
         currentQuery = ""
         movies.value = []
     }
+    
+    public func openMovie(_ movie: MovieObject) {
+        coordinator.openMovie(movie)
+    }
 }
