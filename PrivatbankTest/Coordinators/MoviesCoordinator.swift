@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MoviesCoordinator: BaseCoordinator {
+final class MoviesCoordinator: BaseCoordinator {
     var onComplete: (()->())?
     
 }

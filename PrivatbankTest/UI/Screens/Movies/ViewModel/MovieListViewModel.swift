@@ -5,7 +5,7 @@
 //  Created by Sergiy Nasinnyk on 25.11.2022.
 //
 
-class MovieListViewModel: BaseViewModel<MoviesCoordinator> {
+final class MovieListViewModel: BaseViewModel<MoviesCoordinator> {
     public var movies: Dynamic<[MovieObject]> = Dynamic([])
     public var currentPage: Int = 0
     public var isLastPage = false

@@ -9,16 +9,16 @@ import UIKit
 
 class BaseCoordinator: Coordinator {
     
-    var navigationController: UINavigationController
-    var rootViewController: UIViewController
-    var childCoordinators: [Coordinator] = []
+    public var navigationController: UINavigationController
+    public var rootViewController: UIViewController
+    public var childCoordinators: [Coordinator] = []
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         rootViewController = UIViewController()
     }
     
-    func start() {
+    public func start() {
         navigationController.pushViewController(rootViewController, animated: true)
     }
     

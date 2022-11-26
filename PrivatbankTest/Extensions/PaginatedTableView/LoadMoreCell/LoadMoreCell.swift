@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadMoreCell : UITableViewCell, AutoIndentifierCell {
+final class LoadMoreCell : UITableViewCell, AutoIndentifierCell {
     
     let activityIndicator : UIActivityIndicatorView = {
         let loader = UIActivityIndicatorView()

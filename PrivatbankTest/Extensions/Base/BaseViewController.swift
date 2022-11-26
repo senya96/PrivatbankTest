@@ -11,11 +11,11 @@ class BaseViewController: UIViewController {
     @IBOutlet private(set) weak var scrollView: UIScrollView?
     private var scrollViewContentOffset: CGPoint?
     
-    var onNavigateBack: (() -> Void)?
-    var onWillStartPresenting: (() -> Void)?
-    var onDidStartPresenting: (() -> Void)?
-    var onFinishPresenting: (() -> Void)?
-    var onDidLoad: (() -> Void)?
+    public var onNavigateBack: (() -> Void)?
+    public var onWillStartPresenting: (() -> Void)?
+    public var onDidStartPresenting: (() -> Void)?
+    public var onFinishPresenting: (() -> Void)?
+    public var onDidLoad: (() -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,8 +52,8 @@ class BaseViewController: UIViewController {
         onNavigateBack?()
     }
     
-    func getActiveField() -> UIView? {
-        return view.window?.firstResponder
+    public var activeField: UIView? {
+        view.window?.firstResponder
     }
 }
 
@@ -84,7 +84,7 @@ private extension BaseViewController {
 
         var aRect: CGRect = view.frame
         aRect.size.height -= keyboardSize?.height ?? 0
-        if let activeFieldPresent = getActiveField(), let origin = activeFieldPresent.superview {
+        if let activeFieldPresent = activeField, let origin = activeFieldPresent.superview {
             // Get the Y position of your child view
             let childStartPoint = origin.convert(view.frame.origin, to: scrollView)
             // Scroll to a rectangle starting at the Y of your subview, with a height of the scrollview

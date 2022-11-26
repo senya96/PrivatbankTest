@@ -20,32 +20,32 @@ class SettingsManager {
 extension SettingsManager.Server {
     
     /// Base API  host
-    var baseIP: String {
+    public var baseIP: String {
         switch self {
         case .stage: return "themoviedb.org"
         }
     }
     
     /// API requests base protocol
-    var apiProtocol: String {
+    public var apiProtocol: String {
         "https"
     }
     
     /// API requests port
-    var apiPort: String {
+    public var apiPort: String {
         ""
     }
     
-    var apiVersion: String {
+    public var apiVersion: String {
         "3"
     }
     
     /// Resulting API endpoint
-    var  restHost: String {
+    public var  restHost: String {
         return "\(apiProtocol)://api.\(baseIP)\(apiPort)/\(apiVersion)"
     }
     
-    func getPosterURL(for posterPath: String) -> URL? {
+    public func getPosterURL(for posterPath: String) -> URL? {
         URL(string: "https://image.tmdb.org/t/p/w500\(posterPath)")
     }
 }

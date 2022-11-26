@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieListViewController: BaseViewController {
+final class MovieListViewController: BaseViewController {
     var viewModel: MovieListViewModel?
     
     @IBOutlet private weak var tableView: PaginatedTableView?
@@ -27,14 +27,16 @@ class MovieListViewController: BaseViewController {
         searchBar.becomeFirstResponder()
         bindViewModel()
     }
-    
-    private func setupTableView() {
+}
+
+private extension MovieListViewController {
+    func setupTableView() {
         tableView?.paginatedDelegate = self
         tableView?.paginatedDataSource = self
         MovieCell.register(in: tableView)
     }
     
-    private func bindViewModel() {
+    func bindViewModel() {
         viewModel?.movies.bind { [weak self] movies in
             self?.tableView?.reloadData()
         }

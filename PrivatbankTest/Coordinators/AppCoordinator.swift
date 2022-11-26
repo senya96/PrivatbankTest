@@ -8,19 +8,18 @@
 import UIKit
 
 
-class AppCoordinator {
+final class AppCoordinator {
     
     static var window: UIWindow?
     
-    static func start() {
+    public static func start() {
         showMain()
     }
 }
 
 
-extension AppCoordinator {
-    
-    private static func showMain() {
+private extension AppCoordinator {
+    static func showMain() {
         guard let window = window else {
             fatalError("Need window to present flow")
         }

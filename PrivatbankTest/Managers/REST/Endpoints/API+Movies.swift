@@ -55,13 +55,13 @@ extension API.Auth: TargetType {
 
 extension APIManager {
     enum Movies {
-        static var provider = MoyaProvider<API.Auth>(plugins: [NetworkLoggerPlugin()])
+        public static var provider = MoyaProvider<API.Auth>(plugins: [NetworkLoggerPlugin()])
         
-        static func search(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseObject, Error>) -> Void) {
+        public static func search(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseObject, Error>) -> Void) {
             APIManager.request(provider: APIManager.Movies.provider, target: .searchMovies(query: query, page: page), completion: completion)
         }
         
-        static func getPosterDownloadURL(for posterID: String) -> URL? {
+        public static func getPosterDownloadURL(for posterID: String) -> URL? {
             URL(string: "https://image.tmdb")
         }
     }

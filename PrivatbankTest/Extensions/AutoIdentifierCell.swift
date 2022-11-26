@@ -8,7 +8,7 @@
 import UIKit
 
 /// Protocol for cell identifying easier.
-protocol AutoIndentifierCell: AnyObject {
+public protocol AutoIndentifierCell: AnyObject {
     static var identifier: String { get }
     static var nibName: String { get }
     
@@ -16,8 +16,7 @@ protocol AutoIndentifierCell: AnyObject {
 }
 
 //MARK: - UITableViewCell
-
-extension AutoIndentifierCell where Self: UITableViewCell {
+public extension AutoIndentifierCell where Self: UITableViewCell {
     
     static var identifier: String {
         return self.nibName

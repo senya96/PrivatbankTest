@@ -8,7 +8,7 @@
 import UIKit
 import SDWebImage
 
-class MovieCell: UITableViewCell, AutoIndentifierCell {
+final class MovieCell: UITableViewCell, AutoIndentifierCell {
     @IBOutlet private weak var titleL: UILabel?
     @IBOutlet private weak var overviewL: UILabel?
     @IBOutlet private weak var posterIV: UIImageView?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MovieViewController: BaseViewController {
+final class MovieViewController: BaseViewController {
     
     public var viewModel: MovieViewModel?
     
@@ -22,14 +22,16 @@ class MovieViewController: BaseViewController {
         updateUI()
         bindViewModel()
     }
-    
-    private func bindViewModel() {
+}
+
+private extension MovieViewController {
+    func bindViewModel() {
         viewModel?.movie.bind { [weak self] _ in
             self?.updateUI()
         }
     }
     
-    private func updateUI() {
+    func updateUI() {
         title = viewModel?.movie.value?.title
         if let posterPath = viewModel?.movie.value?.posterPath {
             posterIV?.sd_setImage(with: SettingsManager.environment.getPosterURL(for: posterPath))
