@@ -10,7 +10,6 @@ target 'PrivatbankTest' do
   # Networking
   pod 'Moya', '~> 15.0'
   
-  #Utils
-  pod 'SVProgressHUD'
+  # Utils
   pod 'SDWebImage'
 end
