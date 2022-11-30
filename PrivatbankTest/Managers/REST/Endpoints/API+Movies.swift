@@ -60,9 +60,5 @@ extension APIManager {
         public static func search(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseObject, Error>) -> Void) {
             APIManager.request(provider: APIManager.Movies.provider, target: .searchMovies(query: query, page: page), completion: completion)
         }
-        
-        public static func getPosterDownloadURL(for posterID: String) -> URL? {
-            URL(string: "https://image.tmdb")
-        }
     }
 }

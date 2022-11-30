@@ -33,8 +33,10 @@ private extension MovieViewController {
     
     func updateUI() {
         title = viewModel?.movie.value?.title
+        let noImage = UIImage(named: "no-image")?.withTintColor(.label, renderingMode: .alwaysOriginal)
+        posterIV?.image = noImage
         if let posterPath = viewModel?.movie.value?.posterPath {
-            posterIV?.sd_setImage(with: SettingsManager.environment.getPosterURL(for: posterPath))
+            posterIV?.sd_setImage(with: SettingsManager.environment.getPosterURL(for: posterPath), placeholderImage: noImage)
         }
         popularityL?.text = "Popularity: \(viewModel?.movie.value?.popularity ?? 0.0)"
         ratingL?.text = "Rating: \(viewModel?.movie.value?.voteAverage ?? 0.0)"
