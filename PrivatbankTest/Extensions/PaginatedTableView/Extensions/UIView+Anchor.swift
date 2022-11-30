@@ -15,7 +15,7 @@ extension UIView {
         var topInset = CGFloat(0)
         var bottomInset = CGFloat(0)
         
-        if #available(iOS 11, *), enableInsets {
+        if enableInsets {
             let insets = self.safeAreaInsets
             topInset = insets.top
             bottomInset = insets.bottom
@@ -24,7 +24,7 @@ extension UIView {
         translatesAutoresizingMaskIntoConstraints = false
         
         if let top = top {
-            self.topAnchor.constraint(equalTo: top, constant: paddingTop+topInset).isActive = true
+            self.topAnchor.constraint(equalTo: top, constant: paddingTop + topInset).isActive = true
         }
         if let left = left {
             self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
@@ -33,7 +33,7 @@ extension UIView {
             rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
         }
         if let bottom = bottom {
-            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom-bottomInset).isActive = true
+            bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom - bottomInset).isActive = true
         }
         if height != 0 {
             heightAnchor.constraint(equalToConstant: height).isActive = true

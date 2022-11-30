@@ -83,9 +83,6 @@ public class PaginatedTableView: UITableView {
         self.prefetchDataSource = self
         self.alwaysBounceVertical = true
         
-        // Enable pull to refresh control
-//        self.enablePullToRefresh = true
-        
         // register load more cell
         self.register(LoadMoreCell.self, forCellReuseIdentifier: LoadMoreCell.identifier)
     }

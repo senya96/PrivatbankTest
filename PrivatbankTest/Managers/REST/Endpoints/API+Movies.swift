@@ -8,12 +8,12 @@
 import Moya
 
 extension API {
-    enum Auth {
+    enum Movies {
         case searchMovies(query: String, page: Int)
     }
 }
 
-extension API.Auth: TargetType {
+extension API.Movies: TargetType {
     var baseURL: URL {
         return URL(string: SettingsManager.environment.restHost)!
     }
@@ -55,7 +55,7 @@ extension API.Auth: TargetType {
 
 extension APIManager {
     enum Movies {
-        public static var provider = MoyaProvider<API.Auth>(plugins: [NetworkLoggerPlugin()])
+        public static var provider = MoyaProvider<API.Movies>(plugins: [NetworkLoggerPlugin()])
         
         public static func search(query: String, page: Int, completion: @escaping (Result<SearchMovieResponseObject, Error>) -> Void) {
             APIManager.request(provider: APIManager.Movies.provider, target: .searchMovies(query: query, page: page), completion: completion)

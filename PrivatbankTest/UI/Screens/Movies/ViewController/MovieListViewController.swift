@@ -51,10 +51,11 @@ extension MovieListViewController: UISearchBarDelegate {
             return
         }
         searchBar.resignFirstResponder()
-        
-        viewModel?.search(query: text) { [weak self] error in
-            self?.showErrorAlert(with: error)
-        }
+        viewModel?.setQuery(text)
+        tableView?.loadData(refresh: true)
+//        viewModel?.search(query: text) { [weak self] error in
+//            self?.showErrorAlert(with: error)
+//        }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -75,7 +76,7 @@ extension MovieListViewController: StoryboardInstantiable {
 
 extension MovieListViewController: PaginatedTableViewDelegate {
     func loadMore(_ pageNumber: Int, _ pageSize: Int, onSuccess: @escaping (Bool) -> Void, onError: @escaping (Error) -> Void) {
-        viewModel?.getNextPage { success, error in
+        viewModel?.getPage(pageNumber) { success, error in
             onSuccess(success)
             if let error = error {
                 onError(error)
